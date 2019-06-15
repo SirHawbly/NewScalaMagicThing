@@ -9,7 +9,7 @@ def json_parse(file_name):
 
     # var for all headers, and save and db files
     # lo = []
-    out_path = "parsed_cards_test.csv"
+    out_path = "parsed_cards.csv"
     # db_path = "temp.sqlite"
     count = 0
 
@@ -43,6 +43,8 @@ def json_parse(file_name):
     if os.path.exists(out_path):
         os.remove(out_path)
 
+    print('Loading', file_name, '...', end='')
+
     # open the json and csv files
     with open(out_path, "w+") as outfile:
         with open(file_name, 'r') as json_file:
@@ -52,6 +54,8 @@ def json_parse(file_name):
 
             # load the data from the input file
             json_data = json.load(json_file)
+
+            print('Loaded.')
 
             for json_obj in json_data:
 
@@ -70,7 +74,7 @@ def json_parse(file_name):
                     print('reprint or non-english')
                     continue
 
-                print('parsing ...')
+                print('parsing ...', end='')
                 count += 1
 
                 # pull out these fields from the json obj
@@ -111,6 +115,7 @@ def json_parse(file_name):
 
                 # print(json_obj['name'])
                 outfile.write(line.replace("\n", "|||") + "\n")
+                print(' done.')
                 # return
 
                 # line = str(data).replace("\': \'", "===").replace("': ['", "'===['").replace("'cmc': ", "'cmc'===")
