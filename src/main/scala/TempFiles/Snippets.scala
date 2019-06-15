@@ -49,7 +49,7 @@ class Snippets {
     List("","{5}","{G}","{10}{X}{1}{U}{R}",
       "{G}{G}{R}","{10}{W}{B}{11}")
 
-  // trys to atoi a string, if it can itll return
+  // tries to atoi a string, if it can it'll return
   // that value, if not returns -1.
   def toInt(s: String): Int =
   {
@@ -98,13 +98,14 @@ class csvEntry (val _k : String, _v : String) {
   override def toString : String = {
     new String("[" + key + ",,," + value + "]")
   }
+
   def toArray : Array[csvEntry] = {
     Array[csvEntry](this)
   }
 }
 
 
-object SnippetsObj {
+object SnippetsObj { // TODO - move to FileIO.scala
 
   def main (args : Array[String]) : Unit =
   {
