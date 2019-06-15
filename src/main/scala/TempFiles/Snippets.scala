@@ -1,7 +1,14 @@
+/*
+ * Copyright (c) 2019 Christopher Bartlett
+ * [This program is licensed under the "MIT License"]
+ * Please see the file LICENSE in the source
+ * distribution of this software for license terms.
+ */
+
 package TempFiles
 
 import Array.concat
-import java.security.KeyStore.TrustedCertificateEntry
+// import java.security.KeyStore.TrustedCertificateEntry
 
 import scala.io.{BufferedSource, Source}
 import java.io.{File, PrintWriter}

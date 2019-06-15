@@ -1,3 +1,10 @@
+# *
+# * Copyright (c) 2019 Christopher Bartlett
+# * [This program is licensed under the "MIT License"]
+# * Please see the file LICENSE in the source
+# * distribution of this software for license terms.
+# *
+
 import json
 import sys
 import os
