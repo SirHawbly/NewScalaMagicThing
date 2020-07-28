@@ -167,7 +167,7 @@ sealed abstract class BaseCard (_own: OwnerInfo,
 
   // split the given string into pieces, based off
   // the curly braces, add the costs together, with
-  // X == "" = 0 cmc.
+  // X == "" == 0 cmc.
   def getCMC (c: String): Int =
   {
     var sum: Int = 0
